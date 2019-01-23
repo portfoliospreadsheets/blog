@@ -1,4 +1,4 @@
-# Porting a MEAN Stack application to Firebase+Firestore 
+# How to: Port a MEAN Stack application to Firebase+Firestore 
 
 23rd January 2019.
 
