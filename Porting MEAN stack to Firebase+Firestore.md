@@ -349,7 +349,7 @@ For example, to keep count of the number of reports stored in the system, I writ
 exports.onCreateReport = functions.firestore.document('reports/{userId}/current/{reportId}').onCreate(async (snap, context) => {
   try {
     const ref = await db.collection('stats').doc('general');
-    let general = await getGeneral();
+    let general = await ref.get();
     await ref.set({report_count: general.get('report_count') + 1}, {merge:true});
 
     return 0;
