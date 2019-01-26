@@ -4,7 +4,7 @@
 
 ## Executive Summary
 
-I ported our web application [Portfolio Spreadsheets](https://www.portfoliospreadsheets.com/?ref=ih_porting) from using a MEAN stack to using a Firebase + Firestore stack. In the process I eliminated many paid service dependencies and some code dependencies. Below I provide code snippets and commentary for some common porting tasks. I provide a simple implementation for a given feature and link to the most relevant documentation to help you cut through the piles of information out there.
+I ported our web application [Portfolio Spreadsheets](https://www.portfoliospreadsheets.com/?ref=gh_porting) from using a MEAN stack to using a Firebase + Firestore stack. In the process I eliminated many paid service dependencies and some code dependencies. Below I provide code snippets and commentary for some common porting tasks. I provide a simple implementation for a given feature and link to the most relevant documentation to help you cut through the piles of information out there.
 
 ## Definitions
 
