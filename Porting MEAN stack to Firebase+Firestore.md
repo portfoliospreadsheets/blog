@@ -1,6 +1,6 @@
 # How to: Port a MEAN Stack application to Firebase+Firestore 
 
-23rd January 2019. Updated: 2nd February 2019.
+23rd January 2019. Updated: 1st February 2019.
 
 ## Executive Summary
 
