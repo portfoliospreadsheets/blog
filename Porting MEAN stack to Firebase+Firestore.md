@@ -421,7 +421,7 @@ const admin = require('firebase-admin');
 admin.initializeApp();
 
 var db = admin.firestore();
-const settings = { timestampsInSnapshots: true};
+const settings = {};
 db.settings(settings);
 
 module.exports = {
