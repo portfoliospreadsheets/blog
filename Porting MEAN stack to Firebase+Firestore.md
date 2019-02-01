@@ -1,6 +1,6 @@
 # How to: Port a MEAN Stack application to Firebase+Firestore 
 
-23rd January 2019.
+23rd January 2019. Updated: 2nd February 2019.
 
 ## Executive Summary
 
@@ -89,6 +89,7 @@ See <https://firebase.google.com/docs/functions/callable>
 To manage authorization you can add custom claims to the authorization token. In the cloud function:
 
 ```javascript
+const admin = require('firebase-admin');
 await admin.auth().setCustomUserClaims(uid, {isMember: true});
 ```
 
@@ -210,7 +211,7 @@ private doCustomLogin(tokens) {
 
 ### Price
 
-mLab.com's lowest production ready database plan was US$15 per month for 1GB storage and unlimited read/writes. However they have been acquired by MongoDB.com who's product Atlas starts at about US$9 per month for 2GB plus $0.01+ per GB transferred. Firestore has the following pricing structure:
+mLab.com's lowest production ready database plan was US$15 per month for 1GB storage and unlimited read/writes. However they have been acquired by MongoDB.com who's product Atlas starts at about US$9 per month for 2GB plus $0.01+ per GB transferred. Firestore has the following pricing structure (note: prices for multi-regional database, regional prices lower https://cloud.google.com/firestore/pricing#pricing_update):
 
 Resource | Cost | Free Quota
 --- | --- | ---
@@ -476,10 +477,10 @@ In porting my MEAN stack application to Firebase + Firestore I managed to elimin
 * express-session used the Redis database
 * Kue job queue management used the Redis database
 * authentication boilerplate code
+* Firestore has guaranteed uptime — 99.999% for multi-region instances of Cloud Firestore, and 99.99% for regional instances
 
 ### Cons
 
-* Firestore is still in beta and has no SLA
 * Debugging is slower with a deploy to debug workflow
 * Database queries are not as rich as with MongoDB
 * Database backups are not automated
